@@ -62,48 +62,6 @@
 
         <script src="/assets/global/script.js"></script>
         <script src="/assets/index/script.js"></script>
-
-        <!-- real-time spotify -->
-        <script src="/assets/index/spotifyCurrentlyPlaying.js"></script>
-        <script>
-            function updateSong(){
-                getSong(function(artist, title, nowplaying) {
-                    if (nowplaying == "true"){
-                        $("#live-dot").show();
-                        $("#live-message").text("I don't like talking too much").show();
-                    };
-
-                    if (artist.length > 25) {
-                        if (artist[22] == " ") {
-                            artist = artist.substring(0,21) + "..."
-                        }
-                        else {
-                            artist = artist.substring(0,22) + "...";
-                        }
-                    };
-
-                    if (title.length > 25) {
-                        if (title[22] == " ") {
-                            title = title.substring(0,21) + "..."
-                        } else {
-                            title = title.substring(0,22) + "...";
-                        }
-                    };
-
-                    $("#artist").text(artist);
-                    $("#song").text(title)
-                }, "xdavidhu");
-            }
-            
-            updateSong();
-            setInterval(function(){
-                updateSong();
-            }, 4000);
-        </script>
-
-        <noscript>
-            <div class="panel"><h1>Please enable JavaScript.</h1></div>
-        </noscript>
-
+        
     </body>
 </html>
