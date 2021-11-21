@@ -70,10 +70,7 @@
                 getSong(function(artist, title, nowplaying) {
                     if (nowplaying == "true"){
                         $("#live-dot").show();
-                        $("#live-message").text("I'm listening now to:").show();
-                    } else {
-                        $("#live-dot").hide();
-                        $("#live-message").html("I was listening to:").show();
+                        $("#live-message").text("I don't like talking too much").show();
                     };
 
                     if (artist.length > 25) {
