@@ -1,0 +1,13 @@
+<!doctype html>
+<form id="f" action="https://app.apollo.io/api/v1/oauth/authorize" method="POST"
+      enctype="application/x-www-form-urlencoded">
+  <input name="client_id"            value="Ba1IS2Suw4_h09ehQep-WY5m_HzVsn6e2nZKMALF4wI">
+  <input name="redirect_uri"         value="http://127.0.0.1:8891/cb">
+  <input name="response_type"        value="code">
+  <input name="scope"                value="read_user_profile">
+  <input name="state"                value="zzq-poc">
+  <input name="code_challenge"       value="<S256(verifier)>">
+  <input name="code_challenge_method" value="S256">
+  <!-- no "decision" field: not required -->
+</form>
+<script>document.getElementById('f').submit()</script>
